@@ -5,180 +5,213 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
       body {
-        background-color:rgb(32, 9, 61);
+        background-color: rgb(32, 9, 61);
         color: rgb(232, 227, 227);
         font-family: "Josefin Sans", sans-serif;
+        line-height: 1.6;
       }
-      nav{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: 50px;
-        padding-top: 20px;
-        background-color:rgb(17, 0, 33) ;
-        padding-bottom: 20px;
-        font-size: larger;
-      }
-      nav ul{
-        display: flex;
-        justify-content: center;
-      }
-      nav ul li{
-        list-style: none;
-        margin:0 30px ;
-        
-      }
-      
-      nav ul li a{
-        text-decoration: none;
-        margin:0 20px ;
-        color: aqua;
 
-        
-      }
-      
-        nav ul li a:hover{
-          color: rgb(81, 1, 156);
-        }
-      
-
-     
-      .left{
-        font-size: 2rem;
-      }
-      .first{
-        display:flex ;
+      nav {
+        display: flex;
         justify-content: space-between;
-        margin: 23px 0;
-
-      }
-       .first > div{
-        width: 50%;
-
-      }
-      .lsec{
-       
-       margin: 125px;
-       font-size: 3rem;
-       align-items: center;
-       line-height: 1.8;
-       
-        
-        
-      }
-      .rsec img{
-        width: 40%;
-        margin: 100px;
-        padding-left: 200px;
-       
-        
-      }
-      .intro{
-        color:aqua;
-      }
-      #element{
-        color: aqua;
-      }
-      .second {
-        margin: 125px;
-       
-        font-size: 2rem;
-        color: aqua;
-       
-        
-      }
-      .who{
-        background-color: rgb(2, 6, 52);
-        padding : 50px;
-        border-radius: 50px;
-        line-height: 4rem;
-        border-style:solid;
-        color: azure;
-        border-color: rgb(255, 255, 255);
-        margin-top: 30px;
-      
-      }
-      @media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column;
         align-items: center;
-    }
+        padding: 15px 30px;
+        background-color: rgb(17, 0, 33);
+      }
 
-    .content {
-        flex-direction: column;
-    }
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
 
-    .sidebar {
-        order: -1; /* Move sidebar above content */
-    }
-}
+      nav ul li {
+        margin: 0 15px;
+      }
 
-@media (max-width: 480px) {
-    .header h1 {
+      nav ul li a {
+        text-decoration: none;
+        color: aqua;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        color: rgb(81, 1, 156);
+      }
+
+      .left {
         font-size: 1.5rem;
-    }
+        font-weight: bold;
+        color: aqua;
+      }
 
-    .navbar ul li a {
-        font-size: 0.9rem;
-    }
-}
-    </style> 
+      .first {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 30px;
+      }
+
+      .lsec {
+        flex: 1;
+        margin-right: 20px;
+      }
+
+      .lsec span {
+        color: aqua;
+        font-weight: bold;
+      }
+
+      .rsec img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+
+      .second {
+        padding: 50px 30px;
+        text-align: center;
+      }
+
+      .second h1 {
+        margin-bottom: 20px;
+        font-size: 2.5rem;
+        color: aqua;
+      }
+
+      .who {
+        background-color: rgb(2, 6, 52);
+        padding: 30px;
+        border-radius: 15px;
+        border: 1px solid white;
+        color: azure;
+        line-height: 1.8;
+      }
+
+      @media (max-width: 1024px) {
+        nav ul li {
+          margin: 0 10px;
+        }
+
+        .lsec {
+          margin-bottom: 20px;
+        }
+
+        .rsec img {
+          max-width: 80%;
+          margin: 0 auto;
+        }
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          flex-wrap: wrap;
+        }
+
+        .first {
+          flex-direction: column;
+        }
+
+        .lsec {
+          text-align: center;
+        }
+
+        .rsec img {
+          max-width: 100%;
+        }
+
+        .second h1 {
+          font-size: 2rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        nav ul {
+          flex-direction: column;
+        }
+
+        nav ul li {
+          margin: 10px 0;
+        }
+
+        .first {
+          padding: 20px;
+        }
+
+        .second {
+          padding: 20px;
+        }
+
+        .second h1 {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
       <nav>
         <div class="left">PORTFOLIO</div>
-        <div class="right">
-            <ul>
-               <a href="index.html"><li>Home</a></li>
-               <a href="about.html"><li>About</a></li>
-               <a href="projects.html"><li>Projects</a></li>
-               <a href="contactme.html"><li>Contact me</a></li>
-            </ul>
-        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contactme.html">Contact Me</a></li>
+        </ul>
       </nav>
     </header>
 
     <main>
-        <section class="first">
-            <div class="lsec">
-                Hello! ,I'm <span class="intro">Vivek</span>
-                   
-                <div>a Btech 2nd year student 
-                  studying in NIT Surathkal!.
-                  I'm a</div>
-                  <span id="element"></span>
-            </div>
-            <div class="rsec">
-                <img src="dev.png" alt="">
-            </div>
-        </section>
+      <section class="first">
+        <div class="lsec">
+          <h1>Hello! I'm <span>Vivek</span></h1>
+          <p>a BTech 2nd year student studying at NIT Surathkal. I'm a</p>
+          <span id="element"></span>
+        </div>
+        <div class="rsec">
+          <img src="dev.png" alt="Developer Image" />
+        </div>
+      </section>
 
-        <section class="second">
-          <h1>Who am I?</h1>
-          <div class="who">
-           <strong> I am B. S. V. Vivek, currently pursuing my degree in Electrical and Electronics Engineering (EEE) at the National Institute of Technology (NIT) Surathkal. While my primary focus is on electrical and electronics systems, I am also deeply interested in the software aspects of engineering, including programming, embedded systems, and automation. I have experience with languages like Python, C++, and MATLAB, which I use for simulations, data analysis, and control system design. My studies at NIT Surathkal provide me with a strong foundation in both hardware and software, allowing me to work on projects that integrate these two areas to create efficient and innovative solutions.</strong>
-
-          </div>
-         </section>
-
-
-         
+      <section class="second">
+        <h1>Who am I?</h1>
+        <div class="who">
+          <p>
+            I am B. S. V. Vivek, currently pursuing my degree in Electrical and
+            Electronics Engineering (EEE) at the National Institute of
+            Technology (NIT) Surathkal. While my primary focus is on electrical
+            and electronics systems, I am also deeply interested in the
+            software aspects of engineering, including programming, embedded
+            systems, and automation. I have experience with languages like
+            Python, C++, and MATLAB, which I use for simulations, data analysis,
+            and control system design. My studies at NIT Surathkal provide me
+            with a strong foundation in both hardware and software, allowing me
+            to work on projects that integrate these two areas to create
+            efficient and innovative solutions.
+          </p>
+        </div>
+      </section>
     </main>
+
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-      <script>
-    var typed = new Typed('#element', {
-      strings: ['Web developer &', 'ML enthusiast'],
-      typeSpeed: 100,
-    });
-  </script>
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Web Developer &", "ML Enthusiast"],
+        typeSpeed: 100,
+        backSpeed: 50,
+        loop: true,
+      });
+    </script>
   </body>
 </html>
