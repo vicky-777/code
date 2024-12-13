@@ -3,166 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About me</title>
-    <style> *{
+    <title>About Me</title>
+    <style>
+        /* General Reset */
+        * {
             margin: 0;
             padding: 0;
-        }
-      body {
-        background-color:rgb(32, 9, 61);
-        color: rgb(232, 227, 227);
-        font-family: "Josefin Sans", sans-serif;
-      }
-      nav{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: 50px;
-        padding-top: 20px;
-        background-color:rgb(17, 0, 33) ;
-        padding-bottom: 20px;
-        font-size: larger;
-      }
-      nav ul{
-        display: flex;
-        justify-content: center;
-      }
-      nav ul li{
-        list-style: none;
-        margin:0 30px ;
-        
-      }
-      
-      nav ul li a{
-        text-decoration: none;
-        margin:0 20px ;
-        color: aqua;
-
-        
-      }
-      
-        nav ul li a:hover{
-          color: rgb(81, 1, 156);
-        }
-         .left{
-        font-size: 2rem;}
-
-        .container{
-            margin: 125px;
-       
-        font-size: 2rem;
-        color: aqua;
+            box-sizing: border-box;
         }
 
-        .skill{
-            color: aliceblue;
-            line-height: 3.5rem;
-            margin: 100px;
-
+        /* Body Styling */
+        body {
+            background-color: rgb(32, 9, 61);
+            color: rgb(232, 227, 227);
+            font-family: "Josefin Sans", sans-serif;
+            line-height: 1.6;
         }
 
-        .focus{
-            color: aliceblue;
-            line-height: 3.5rem;
-            margin: 100px;
-
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: rgb(17, 0, 33);
+            font-size: 1.2rem;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
         }
-        .academic{
-            color: aliceblue;
-            line-height: 3.5rem;
-            margin: 100px;
 
+        nav .left {
+            font-size: 2rem;
+            font-weight: bold;
+            color: aqua;
         }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: aqua;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: rgb(81, 1, 156);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 20px;
+            font-size: 1.2rem;
+            color: #e4e4e4;
+        }
+
+        h2 {
+            color: aqua;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 5px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: rgb(17, 0, 33);
+            color: rgb(181, 181, 181);
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            body {
+                font-size: 1rem;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px 20px;
+            }
+
+            nav .left {
+                margin-bottom: 10px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+
         @media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column;
-        align-items: center;
-    }
+            nav ul li a {
+                font-size: 1rem;
+            }
 
-    .content {
-        flex-direction: column;
-    }
+            h2 {
+                font-size: 1.5rem;
+            }
 
-    .sidebar {
-        order: -1; /* Move sidebar above content */
-    }
-}
+            .container {
+                font-size: 1rem;
+            }
+        }
 
-@media (max-width: 480px) {
-    .header h1 {
-        font-size: 1.5rem;
-    }
+        @media (max-width: 480px) {
+            nav {
+                padding: 10px;
+            }
 
-    .navbar ul li a {
-        font-size: 0.9rem;
-    }
-}
+            nav .left {
+                font-size: 1.5rem;
+            }
 
-       
-      
+            nav ul {
+                align-items: center;
+                width: 100%;
+            }
 
+            nav ul li {
+                margin: 0;
+                padding: 5px 0;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            .container {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+
+            footer {
+                font-size: 0.8rem;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-         <header>
-      <nav>
-        <div class="left">PORTFOLIO</div>
-        <div class="right">
+        <nav>
+            <div class="left">PORTFOLIO</div>
             <ul>
-               <a href="index.html"><li>Home</a></li>
-               <a href="about.html"><li>About</a></li>
-               <a href="projects.html"><li>Projects</a></li>
-               <a href="contactme.html"><li>Contact me</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contactme.html">Contact me</a></li>
             </ul>
-        </div>
-      </nav>
-    </header>
+        </nav>
     </header>
     <main>
+        <div class="container">
+            <h2>Academic Journey</h2>
+            <ul class="academic">
+                <li><strong>Early Interest in Science and Technology:</strong> Developed a passion for <strong>Mathematics, Physics,</strong> and <strong>Computer Science</strong> from a young age. Excelled in science competitions and academic events during school years, laying a solid foundation for my engineering career.</li>
+                <li><strong>High School Achievements:</strong> Focused on <strong>Robotics</strong> and <strong>Programming</strong>, actively participating in science fairs and technical exhibitions. Secured top ranks in <strong>Physics</strong> and <strong>Mathematics</strong>, strengthening my interest in engineering.</li>
+                <li><strong>Undergraduate Studies at NIT Surathkal:</strong> Currently pursuing my degree in <strong>Electrical and Electronics Engineering</strong>. Consistently performing well in core subjects and learning <strong>Python, ML, HTML, JS</strong>, and <strong>Embedded Systems</strong>. Actively involved in <strong>engineering projects</strong>, applying theoretical knowledge to real-world applications.</li>
+            </ul>
 
-   
+            <h2>Interests</h2>
+            <ul class="skill">
+                <li><strong>Programming Languages:</strong> Python, C++, MATLAB, JavaScript</li>
+                <li><strong>Embedded Systems:</strong> Arduino, Microcontrollers</li>
+                <li><strong>Software Tools:</strong> MATLAB, Simulink, AutoCAD, LTspice</li>
+                <li><strong>Electronics:</strong> Circuit Design, PCB Design, Signal Processing</li>
+                <li><strong>Data Analysis:</strong> Data Visualization, Machine Learning (Python)</li>
+            </ul>
 
-<div class="container">
-    
-    <h2>Academic Journey</h2>
-    <ul class="academic">
-        <li><strong>Early Interest in Science and Technology:</strong> Developed a passion for <strong>Mathematics, Physics,</strong> and <strong>Computer Science</strong> from a young age. Excelled in science competitions and academic events during school years, laying a solid foundation for my engineering career.</li>
-        <li><strong>High School Achievements:</strong> Focused on <strong>Robotics</strong> and <strong>Programming</strong>, actively participating in science fairs and technical exhibitions. Secured top ranks in <strong>Physics</strong> and <strong>Mathematics</strong>, strengthening my interest in engineering.</li>
-        <li><strong>Undergraduate Studies at NIT Surathkal:</strong> Currently pursuing my degree in <strong>Electrical and Electronics Engineering</strong>. Consistently performing well in core subjects,and learning <strong>Python , ML , HTML ,JS</strong> and <strong>Embedded Systems</strong>. Actively involved in <strong>engineering projects</strong>, applying theoretical knowledge to real-world applications.</li>
-    </ul>
+            <h2>Vision</h2>
+            <ul class="focus">
+                <li>Focused on integrating <strong>hardware</strong> and <strong>software</strong> solutions to create innovative technologies.</li>
+                <li>Passionate about solving real-world problems through <strong>automation, smart devices</strong>, and <strong>power system optimization</strong>.</li>
+                <li>Aim to leverage my skills in <strong>Electrical Engineering</strong> and <strong>Software Development</strong> to contribute to impactful, sustainable, and efficient technological advancements.</li>
+            </ul>
 
-   <h2 >Interests</h2>
-    <ul class="skill">
-         
-        <li><strong>Programming Languages:</strong> Python, C++, MATLAB, JavaScript</li>
-        <li><strong>Embedded Systems:</strong> Arduino, Microcontrollers</li>
-        <li><strong>Software Tools:</strong> MATLAB, Simulink, AutoCAD, LTspice</li>
-        <li><strong>Electronics:</strong> Circuit Design, PCB Design, Signal Processing</li>
-        
-        <li><strong>Data Analysis:</strong> Data Visualization, Machine Learning (Python)</li>
-    </ul>
-
-    <h2>Vision</h2>
-    <ul class="focus">
-        <li>Focused on integrating <strong>hardware</strong> and <strong>software</strong> solutions to create innovative technologies.</li>
-        <li>Passionate about solving real-world problems through <strong>automation, smart devices</strong>, and <strong>power system optimization</strong>.</li>
-        <li>Aim to leverage my skills in <strong>Electrical Engineering</strong> and <strong>Software Development</strong> to contribute to impactful, sustainable, and efficient technological advancements.</li>
-    </ul>
-
-    <h2>Achievements</h2>
-    <ul class="focus">
-        <li>Achieved <strong>600/600</strong> marks in <strong>10th board</strong> examinations.</li>
-        <li>Scored <strong>978/1000</strong> in intermediate exams conducted in 11th and 12th standard.</li>
-        <li>Top <strong>0.6 %</strong> in <strong>JEE MAINS</strong> exam conducted nation wide.</li>
-        <li>Top <strong>6 %</strong> in <strong>JEE ADVANCED</strong> exam conducted nation wide.</li>
-    </ul>
-
-    
-</div>
-
-<footer>
-    <p>Thank you for visiting my portfolio!</p>
-</footer>
+            <h2>Achievements</h2>
+            <ul class="focus">
+                <li>Achieved <strong>600/600</strong> marks in <strong>10th board</strong> examinations.</li>
+                <li>Scored <strong>978/1000</strong> in intermediate exams conducted in 11th and 12th standard.</li>
+                <li>Top <strong>0.6 %</strong> in <strong>JEE MAINS</strong> exam conducted nationwide.</li>
+                <li>Top <strong>6 %</strong> in <strong>JEE ADVANCED</strong> exam conducted nationwide.</li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <p>Thank you for visiting my portfolio!</p>
+    </footer>
 </body>
 </html>
