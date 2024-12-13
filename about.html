@@ -73,6 +73,30 @@
             margin: 100px;
 
         }
+        @media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        order: -1; /* Move sidebar above content */
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .navbar ul li a {
+        font-size: 0.9rem;
+    }
+}
 
        
       
