@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <style>
+      /* General Reset */
       * {
         margin: 0;
         padding: 0;
@@ -21,12 +22,22 @@
         line-height: 1.6;
       }
 
+      /* Navigation Bar */
       nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 15px 30px;
         background-color: rgb(17, 0, 33);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      nav .left {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: aqua;
       }
 
       nav ul {
@@ -49,12 +60,7 @@
         color: rgb(81, 1, 156);
       }
 
-      .left {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: aqua;
-      }
-
+      /* Hero Section */
       .first {
         display: flex;
         flex-wrap: wrap;
@@ -68,6 +74,11 @@
         margin-right: 20px;
       }
 
+      .lsec h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
       .lsec span {
         color: aqua;
         font-weight: bold;
@@ -79,6 +90,7 @@
         border-radius: 10px;
       }
 
+      /* About Section */
       .second {
         padding: 50px 30px;
         text-align: center;
@@ -99,13 +111,20 @@
         line-height: 1.8;
       }
 
+      /* Responsive Design */
       @media (max-width: 1024px) {
         nav ul li {
           margin: 0 10px;
         }
 
+        .first {
+          padding: 40px 20px;
+        }
+
         .lsec {
-          margin-bottom: 20px;
+          flex-basis: 100%;
+          text-align: center;
+          margin-right: 0;
         }
 
         .rsec img {
@@ -119,26 +138,30 @@
           flex-wrap: wrap;
         }
 
+        nav ul {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
         .first {
           flex-direction: column;
-        }
-
-        .lsec {
           text-align: center;
-        }
-
-        .rsec img {
-          max-width: 100%;
         }
 
         .second h1 {
           font-size: 2rem;
+        }
+
+        .who {
+          padding: 20px;
         }
       }
 
       @media (max-width: 480px) {
         nav ul {
           flex-direction: row;
+          align-items: center;
+          gap: 0.5rem;
         }
 
         nav ul li {
@@ -149,12 +172,13 @@
           padding: 20px;
         }
 
-        .second {
-          padding: 20px;
-        }
-
         .second h1 {
           font-size: 1.5rem;
+        }
+
+        .who {
+          font-size: 0.9rem;
+          line-height: 1.6;
         }
       }
     </style>
@@ -173,6 +197,7 @@
     </header>
 
     <main>
+      <!-- Hero Section -->
       <section class="first">
         <div class="lsec">
           <h1>Hello! I'm <span>Vivek</span></h1>
@@ -184,6 +209,7 @@
         </div>
       </section>
 
+      <!-- About Section -->
       <section class="second">
         <h1>Who am I?</h1>
         <div class="who">
@@ -207,7 +233,7 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
       var typed = new Typed("#element", {
-        strings: ["Web Developer &", "ML Enthusiast"],
+        strings: ["Web Developer", "ML Enthusiast"],
         typeSpeed: 100,
         backSpeed: 50,
         loop: true,
@@ -215,3 +241,4 @@
     </script>
   </body>
 </html>
+
